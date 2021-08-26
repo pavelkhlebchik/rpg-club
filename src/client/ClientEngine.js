@@ -140,6 +140,7 @@ class ClientEngine {
       textBaseline: 'center',
       ...opt,
     };
+
     const { ctx, camera } = this;
 
     ctx.textBaseline = options.textBaseline;
@@ -148,7 +149,6 @@ class ClientEngine {
 
     const measure = ctx.measureText(options.text);
     const textHeight = measure.actualBoundingBoxAscent;
-
     // eslint-disable-next-line max-len
     const barWidth = clamp(measure.width + 2 * options.horizontalPadding, options.minWidth, options.maxWidth);
     const barHeight = textHeight + 2 * options.verticalPadding;
