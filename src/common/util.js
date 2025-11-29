@@ -36,3 +36,42 @@ export function getTime(date) {
     convertDate.getSeconds(),
   )}`;
 }
+
+function random(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+export function generateMap(mapSize) {
+  const wall = 'wall';
+  const grass = 'grass';
+  const npcSpawn = 'npcSpawn';
+  const spawn = 'spawn';
+  const fire = 'fire';
+
+  const sad = [wall, grass, npcSpawn, spawn, fire];
+
+  const walls = [];
+  const randomMapItems = [];
+  const map = [];
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; mapSize > i; i++) {
+    walls.push([[wall]]);
+    randomMapItems.push([[sad[random(sad.length - 1)]]]);
+    // // eslint-disable-next-line no-plusplus
+    // for (let j = 1; mapSize > j; j++) {
+    // }
+  }
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; mapSize - 2 > i; i++) {
+    map.unshift(randomMapItems);
+    // // eslint-disable-next-line no-plusplus
+    // for (let j = 1; mapSize > j; j++) {
+    // }
+  }
+
+  map.push(walls);
+  // map.unshift(randomMapItems);
+  map.unshift(walls);
+
+  return map;
+}
