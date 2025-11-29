@@ -5,6 +5,10 @@ export default {
   terrain: {
     grass: {
       img: terrainIMG,
+      // первое значение у фрейма это ось Х (горизонтальное положение картинок terrain)
+      //  1 сдвиг кратен 64px
+      // второе значение у фрейма это ось Y (вертикальное положение картинок в terrain)
+      //  1 сдвиг кратен 64px
       frames: [[896, 256, 64, 64]],
     },
     water: {
@@ -22,6 +26,10 @@ export default {
     npcSpawn: {
       img: terrainIMG,
       frames: [[896, 576, 64, 64]],
+    },
+    fire: {
+      img: terrainIMG,
+      frames: [[448, 384, 64, 64]],
     },
   },
   characters: {

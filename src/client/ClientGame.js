@@ -76,6 +76,10 @@ class ClientGame {
         player.setState(dir);
         player.once('motion-stopped', () => player.setState('main'));
       }
+
+      if (canMove && player.cell.cellCfg.flat().some((cell) => cell === 'fire')) {
+        this.map.init();
+      }
     }
   }
 
