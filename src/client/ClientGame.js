@@ -83,7 +83,6 @@ class ClientGame {
     if (!ClientGame.game) {
       ClientGame.game = new ClientGame(cfg);
     }
-    console.log('Game INIT');
   }
 }
 
