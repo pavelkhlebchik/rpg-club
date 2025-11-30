@@ -29,6 +29,12 @@
         "sprite": ["terrain", "npcSpawn"],
         "frame": 0
     },
+    "fire": {
+        "name": "fire",
+        "type": "static",
+        "sprite": ["terrain", "fire"],
+        "frame": 0
+    },
     "boy1": {
         "name": "boy1",
         "type": "animated",
