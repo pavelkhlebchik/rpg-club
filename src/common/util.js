@@ -57,20 +57,13 @@ export function generateMap(mapSize) {
   for (let i = 0; mapSize > i; i++) {
     walls.push([[wall]]);
     randomMapItems.push([[sad[random(sad.length - 1)]]]);
-    // // eslint-disable-next-line no-plusplus
-    // for (let j = 1; mapSize > j; j++) {
-    // }
   }
   // eslint-disable-next-line no-plusplus
   for (let i = 0; mapSize - 2 > i; i++) {
     map.unshift(randomMapItems);
-    // // eslint-disable-next-line no-plusplus
-    // for (let j = 1; mapSize > j; j++) {
-    // }
   }
 
   map.push(walls);
-  // map.unshift(randomMapItems);
   map.unshift(walls);
 
   return map;
