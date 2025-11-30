@@ -2,7 +2,7 @@ import ClientEngine from './ClientEngine';
 import ClientWorld from './ClientWorld';
 
 import sprites from '../configs/sprites';
-import levelCfg from '../configs/world.json';
+import levelCfg from '../configs/world';
 import gameObjects from '../configs/gameObjects.json';
 
 class ClientGame {
